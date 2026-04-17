@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator — Zain Calculator World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-blur"></div>
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">Zain Calculator World</a>
+    </div>
+    <div class="nav-search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search calculators..."
+        autocomplete="off"
+      />
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+
+    <div class="page-header">
+      <h1>BMI Calculator</h1>
+      <p>Calculate your Body Mass Index based on height and weight</p>
+    </div>
+
+    <div class="calc-wrapper">
+      <div class="calc-card">
+
+        <div class="form-group">
+          <label for="bmiAge">Age</label>
+          <input
+            type="number"
+            id="bmiAge"
+            placeholder="Enter your age"
+            min="1"
+            max="120"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="bmiGender">Gender</label>
+          <select id="bmiGender">
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="bmiHeight">Height (cm)</label>
+          <input
+            type="number"
+            id="bmiHeight"
+            placeholder="Enter height in centimeters"
+            min="50"
+            max="300"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="bmiWeight">Weight (kg)</label>
+          <input
+            type="number"
+            id="bmiWeight"
+            placeholder="Enter weight in kilograms"
+            min="1"
+            max="500"
+          />
+        </div>
+
+        <div class="form-group">
+          <span class="error-msg" id="bmiError"></span>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn-primary" id="calculateBmiBtn">Calculate BMI</button>
+          <button class="btn-secondary" id="resetBmiBtn">Reset</button>
+        </div>
+
+        <div class="result-box" id="bmiResult" style="display:none;">
+          <span class="result-label">Your BMI</span>
+          <span class="result-value" id="bmiValue">0.0</span>
+          <span class="result-unit" id="bmiCategory"></span>
+        </div>
+
+        <div class="bmi-scale" id="bmiScale" style="display:none;">
+          <div class="scale-row">
+            <span class="scale-dot underweight"></span>
+            <span>Underweight — BMI below 18.5</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-dot normal"></span>
+            <span>Normal Weight — BMI 18.5 to 24.9</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-dot overweight"></span>
+            <span>Overweight — BMI 25 to 29.9</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-dot obese"></span>
+            <span>Obese — BMI 30 and above</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Powered by Zain Calculator World</p>
+    <p>&copy; 2026 All rights reserved</p>
+  </footer>
+
+  <script src="search.js"></script>
+  <script src="bmi.js"></script>
+
+</body>
+</html>

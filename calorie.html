@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calorie Calculator — Zain Calculator World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-blur"></div>
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">Zain Calculator World</a>
+    </div>
+    <div class="nav-search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search calculators..."
+        autocomplete="off"
+      />
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+
+    <div class="page-header">
+      <h1>Calorie Calculator</h1>
+      <p>Estimate your daily caloric needs based on your activity level</p>
+    </div>
+
+    <div class="calc-wrapper">
+      <div class="calc-card">
+
+        <div class="form-group">
+          <label for="calAge">Age</label>
+          <input
+            type="number"
+            id="calAge"
+            placeholder="Enter your age"
+            min="1"
+            max="120"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="calGender">Gender</label>
+          <select id="calGender">
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="calHeight">Height (cm)</label>
+          <input
+            type="number"
+            id="calHeight"
+            placeholder="Enter height in centimeters"
+            min="50"
+            max="300"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="calWeight">Weight (kg)</label>
+          <input
+            type="number"
+            id="calWeight"
+            placeholder="Enter weight in kilograms"
+            min="1"
+            max="500"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="calActivity">Activity Level</label>
+          <select id="calActivity">
+            <option value="">Select activity level</option>
+            <option value="1.2">Sedentary — Little or no exercise</option>
+            <option value="1.375">Lightly Active — Exercise 1 to 3 days per week</option>
+            <option value="1.55">Moderately Active — Exercise 3 to 5 days per week</option>
+            <option value="1.725">Very Active — Hard exercise 6 to 7 days per week</option>
+            <option value="1.9">Extra Active — Very hard exercise or physical job</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <span class="error-msg" id="calError"></span>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn-primary" id="calculateCalBtn">Calculate Calories</button>
+          <button class="btn-secondary" id="resetCalBtn">Reset</button>
+        </div>
+
+        <div class="result-box" id="calResult" style="display:none;">
+          <span class="result-label">Daily Calories</span>
+          <span class="result-value" id="calValue">0</span>
+          <span class="result-unit">kcal / day</span>
+          <span class="result-note" id="calNote"></span>
+        </div>
+
+        <div class="calorie-breakdown" id="calBreakdown" style="display:none;">
+          <h3>Calorie Goals Breakdown</h3>
+          <div class="breakdown-grid">
+            <div class="breakdown-item">
+              <span class="b-label">Weight Loss</span>
+              <span class="b-value" id="weightLoss">0</span>
+              <span class="b-unit">kcal / day</span>
+            </div>
+            <div class="breakdown-item highlight">
+              <span class="b-label">Maintain Weight</span>
+              <span class="b-value" id="maintain">0</span>
+              <span class="b-unit">kcal / day</span>
+            </div>
+            <div class="breakdown-item">
+              <span class="b-label">Weight Gain</span>
+              <span class="b-value" id="weightGain">0</span>
+              <span class="b-unit">kcal / day</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Powered by Zain Calculator World</p>
+    <p>&copy; 2026 All rights reserved</p>
+  </footer>
+
+  <script src="search.js"></script>
+  <script src="calorie.js"></script>
+
+</body>
+</html>

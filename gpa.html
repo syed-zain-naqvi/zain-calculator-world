@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPA Calculator — Zain Calculator World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-blur"></div>
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">Zain Calculator World</a>
+    </div>
+    <div class="nav-search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search calculators..."
+        autocomplete="off"
+      />
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+
+    <div class="page-header">
+      <h1>GPA Calculator</h1>
+      <p>Add your courses, credits, and grades to calculate your GPA</p>
+    </div>
+
+    <div class="calc-wrapper">
+      <div class="calc-card wide-card">
+
+        <div id="coursesContainer"></div>
+
+        <button class="btn-add" id="addCourseBtn">+ Add Course</button>
+
+        <div class="form-group">
+          <span class="error-msg" id="gpaError"></span>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn-primary" id="calculateGpaBtn">Calculate GPA</button>
+          <button class="btn-secondary" id="resetGpaBtn">Reset</button>
+        </div>
+
+        <div class="result-box" id="gpaResult" style="display:none;">
+          <span class="result-label">Your GPA</span>
+          <span class="result-value" id="gpaValue">0.00</span>
+          <span class="result-unit">out of 4.00</span>
+          <span class="result-note" id="gpaNote"></span>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Powered by Zain Calculator World</p>
+    <p>&copy; 2026 All rights reserved</p>
+  </footer>
+
+  <script src="search.js"></script>
+  <script src="gpa.js"></script>
+
+</body>
+</html>

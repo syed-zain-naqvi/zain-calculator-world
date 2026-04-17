@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator — Zain Calculator World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-blur"></div>
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">Zain Calculator World</a>
+    </div>
+    <div class="nav-search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search calculators..."
+        autocomplete="off"
+      />
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+
+    <div class="page-header">
+      <h1>Simple Calculator</h1>
+      <p>Perform basic arithmetic operations</p>
+    </div>
+
+    <div class="calc-wrapper">
+      <div class="simple-calc-card">
+
+        <div class="calc-screen">
+          <div class="calc-expression" id="calcExpression"></div>
+          <div class="calc-display" id="calcDisplay">0</div>
+        </div>
+
+        <div class="calc-buttons">
+
+          <button class="calc-btn btn-clear" id="btnClear">C</button>
+          <button class="calc-btn btn-backspace" id="btnBackspace">DEL</button>
+          <button class="calc-btn btn-operator" data-value="%" >%</button>
+          <button class="calc-btn btn-operator" data-value="/">÷</button>
+
+          <button class="calc-btn btn-number" data-value="7">7</button>
+          <button class="calc-btn btn-number" data-value="8">8</button>
+          <button class="calc-btn btn-number" data-value="9">9</button>
+          <button class="calc-btn btn-operator" data-value="*">×</button>
+
+          <button class="calc-btn btn-number" data-value="4">4</button>
+          <button class="calc-btn btn-number" data-value="5">5</button>
+          <button class="calc-btn btn-number" data-value="6">6</button>
+          <button class="calc-btn btn-operator" data-value="-">−</button>
+
+          <button class="calc-btn btn-number" data-value="1">1</button>
+          <button class="calc-btn btn-number" data-value="2">2</button>
+          <button class="calc-btn btn-number" data-value="3">3</button>
+          <button class="calc-btn btn-operator" data-value="+">+</button>
+
+          <button class="calc-btn btn-number span-two" data-value="0">0</button>
+          <button class="calc-btn btn-number" data-value=".">.</button>
+          <button class="calc-btn btn-equals" id="btnEquals">=</button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Powered by Zain Calculator World</p>
+    <p>&copy; 2026 All rights reserved</p>
+  </footer>
+
+  <script src="search.js"></script>
+  <script src="calculator.js"></script>
+
+</body>
+</html>
+```
